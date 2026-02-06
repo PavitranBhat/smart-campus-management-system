@@ -1,14 +1,13 @@
-class Student:
+from models.person import Person
 
+class Student(Person):
     def __init__(self, name, student_id):
-        self.name = name
-        self.student_id = student_id
+        super().__init__(name, student_id)
         self.courses = []
-
-    def display_details(self):
-        print("Student Name:", self.name)
-        print("Student ID:", self.student_id)
-        print("Courses:", self.courses)
 
     def enroll_course(self, course):
         self.courses.append(course)
+
+    def display_details(self):
+        super().display_details()
+        print("Courses:", self.courses)

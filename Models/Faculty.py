@@ -1,11 +1,10 @@
-class Faculty:
+from models.person import Person
 
+class Faculty(Person):
     def __init__(self, name, faculty_id, subject):
-        self.name = name
-        self.faculty_id = faculty_id
+        super().__init__(name, faculty_id)
         self.subject = subject
 
     def display_details(self):
-        print("Faculty Name:", self.name)
-        print("Faculty ID:", self.faculty_id)
+        super().display_details()
         print("Subject:", self.subject)
