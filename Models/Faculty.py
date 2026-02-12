@@ -1,10 +1,14 @@
 from models.person import Person
 
 class Faculty(Person):
-    def __init__(self, name, faculty_id, subject):
-        super().__init__(name, faculty_id)
-        self.subject = subject
+    def __init__(self, person_id, name, specialization):
+        super().__init__(person_id, name)
+        self.specialization = specialization
 
-    def display_details(self):
-        super().display_details()
-        print("Subject:", self.subject)
+    def display_info(self):
+        base_info = super().display_info()
+        base_info.update({
+            "role": "Faculty",
+            "specialization": self.specialization
+        })
+        return base_info

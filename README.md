@@ -1,11 +1,30 @@
-Smart Campus Management System
+# Smart Campus Management System API
 
-This project simulates campus management using OOP concepts.
+A structured backend application built using Python and Flask, demonstrating Object-Oriented Programming principles and RESTful API design.
 
-Concepts Covered:
-- Classes and Objects
-- Multi-object handling
-- System design
+## Features
 
-(Project under development)
+- Student Management (CRUD)
+- Faculty Management
+- Course Management
+- Student Enrollment in Courses
 
+## Concepts Demonstrated
+
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Composition
+- Layered Architecture
+- REST API Design
+- Proper HTTP Status Codes
+
+## Tech Stack
+
+- Python
+- Flask
+
+## Run Project
+
+pip install -r requirements.txt
+python app.py

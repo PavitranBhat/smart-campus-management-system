@@ -1,11 +1,16 @@
-from abc import ABC, abstractmethod
+class Person:
+    def __init__(self, person_id, name):
+        self._id = person_id      # Encapsulation
+        self._name = name
 
-class Person(ABC):
+    def get_id(self):
+        return self._id
 
-    def __init__(self, name, id):
-        self.name = name
-        self._id = id
+    def get_name(self):
+        return self._name
 
-    @abstractmethod
-    def display_details(self):
-        pass
+    def display_info(self):
+        return {
+            "id": self._id,
+            "name": self._name
+        }
